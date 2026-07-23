@@ -1,0 +1,34 @@
+GIANTSTEPS+ CONFIDENCE-GATED KEY RUN   frozen 2026-07-15
+  detector = essentia edmm  (the shipped Cratefox key detector, analyze.py)
+  confidence = essentia key strength  (0..1, the same value the app uses to flag a key)
+  truth = GiantSteps+ expert re-annotations, dominant key by longest labelled span
+          (Faraldo re-annotation of the same GiantSteps tracks; Zenodo 4153506)
+  metric = Camelot-exact.  "dangerous" = NOT harmonically mixable; mixable = identical,
+           relative major/minor, or +-1 around the wheel (tags.camelot_compatible).
+  scored 596 tracks (of the 604 key set; 8 have no mappable expert dominant key)
+----------------------------------------------------------------
+  ALL                coverage 100.0%  (596/596)   exact 69.5%   dangerous 18.5%
+  strength >= 0.70   coverage  82.2%  (490/596)   exact 78.4%   dangerous 11.8%
+  strength <  0.70   coverage  17.8%  (106/596)   exact 28.3%   dangerous 49.1%
+----------------------------------------------------------------
+  The keys the detector is unsure about (strength < 0.70) really are the weak ones -
+  28.3% exact, 49.1% dangerous on their own. The app marks exactly those keys "worth a
+  listen" in the UI, so the keys it shows without a mark are the confident 82.2%, which
+  read 78.4% exact / 11.8% dangerous. This is a shipped product knob, not a re-tune: the
+  strength gate and the flag already exist in the app.
+
+  Read the split against the RIGHT baseline: 78.4% vs the all-tracks 69.5% under these
+  expert labels (not the 64.9% gauge, which is the OLD GiantSteps labels), and 11.8% vs
+  18.5% (not 22.2%). Old-label baseline kept for continuity: 64.9% exact / 22.2% dangerous.
+
+  inputs  ~/cratefox-reference/l4_feat_test.json         per track: ecam (essentia edmm
+                                                          Camelot pick) + est (strength),
+                                                          built by l4_features.py over
+                                                          tests/giantsteps/audio
+          ~/cratefox-reference/giantsteps-plus/           expert re-annotations
+            new_annotations/*.json
+  method  dominant-key parser = l6_eval.load_expert (longest total span across segments);
+          scorer = tags.camelot_compatible.  Recompute: gsplus_confidence.py.
+  note    the gauges' giantsteps_truth.csv harness scores the OLD labels; this run scores
+          the expert re-annotation labels, so it is a separate frozen record, not the same
+          command. The strength values come straight from the shipped essentia edmm detector.

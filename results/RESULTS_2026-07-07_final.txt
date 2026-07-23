@@ -1,0 +1,35 @@
+OFF-GENRE BENCHMARK  csv=giantsteps_truth.csv
+  scored 1225 tracks (0 files missing, 0 unreadable)
+----------------------------------------------------------------
+  ALL                n=1225 (k604/b664)  exact  64.9%  dangerous  22.2%  bpm1x  49.8%  octave-err  56
+  breaks             n= 40 (k 14/b 26)  exact  57.1%  dangerous  28.6%  bpm1x  30.8%  octave-err   1
+  chill-out          n= 24 (k 11/b 15)  exact  54.5%  dangerous  27.3%  bpm1x  13.3%  octave-err  10
+  deep-house         n=100 (k 77/b 24)  exact  77.9%  dangerous  14.3%  bpm1x  41.7%  octave-err   1
+  dj-tools           n= 10 (k  3/b  9)  exact   0.0%  dangerous  33.3%  bpm1x  22.2%  octave-err   0
+  drum-and-bass      n=161 (k 38/b139)  exact  57.9%  dangerous  28.9%  bpm1x  56.1%  octave-err  10
+  dubstep            n= 97 (k 22/b 76)  exact  59.1%  dangerous  18.2%  bpm1x  48.7%  octave-err   7
+  electro-house      n= 71 (k 51/b 22)  exact  74.5%  dangerous  11.8%  bpm1x  50.0%  octave-err   1
+  electronica        n= 71 (k 20/b 54)  exact  65.0%  dangerous  25.0%  bpm1x  40.7%  octave-err   7
+  funk r&b           n=  3 (k  3/b  0)  exact 100.0%  dangerous   0.0%  bpm1x   n/a  octave-err   -
+  funk-r-and-b       n=  1 (k  0/b  1)  exact   n/a  dangerous   n/a  bpm1x 100.0%  octave-err   0
+  glitch-hop         n= 22 (k  6/b 17)  exact  83.3%  dangerous  16.7%  bpm1x  41.2%  octave-err   5
+  hard-dance         n= 11 (k  4/b  8)  exact 100.0%  dangerous   0.0%  bpm1x  25.0%  octave-err   0
+  hardcore hard-techno n=  3 (k  3/b  0)  exact  66.7%  dangerous  33.3%  bpm1x   n/a  octave-err   -
+  hardcore-hard-techno n= 14 (k  0/b 14)  exact   n/a  dangerous   n/a  bpm1x  50.0%  octave-err   4
+  hip-hop            n=  6 (k  4/b  2)  exact 100.0%  dangerous   0.0%  bpm1x  50.0%  octave-err   0
+  house              n= 70 (k 47/b 23)  exact  70.2%  dangerous  21.3%  bpm1x  56.5%  octave-err   2
+  indie-dance nu-disco n= 14 (k 14/b  0)  exact  71.4%  dangerous  14.3%  bpm1x   n/a  octave-err   -
+  indie-dance-nu-disco n= 11 (k  0/b 11)  exact   n/a  dangerous   n/a  bpm1x  27.3%  octave-err   4
+  minimal            n= 18 (k 11/b  8)  exact  45.5%  dangerous  54.5%  bpm1x  50.0%  octave-err   0
+  pop rock           n=  7 (k  7/b  1)  exact  42.9%  dangerous  14.3%  bpm1x 100.0%  octave-err   0
+  pop-rock           n=  2 (k  0/b  2)  exact   n/a  dangerous   n/a  bpm1x  50.0%  octave-err   0
+  progressive-house  n=102 (k 88/b 19)  exact  61.4%  dangerous  22.7%  bpm1x  68.4%  octave-err   0
+  psy-trance         n= 39 (k  5/b 34)  exact 100.0%  dangerous   0.0%  bpm1x  67.6%  octave-err   1
+  reggae dub         n=  3 (k  3/b  0)  exact  66.7%  dangerous   0.0%  bpm1x   n/a  octave-err   -
+  reggae-dub         n=  2 (k  0/b  2)  exact   n/a  dangerous   n/a  bpm1x   0.0%  octave-err   1
+  tech-house         n=102 (k 81/b 22)  exact  55.6%  dangerous  28.4%  bpm1x  50.0%  octave-err   0
+  techno             n= 93 (k 34/b 61)  exact  47.1%  dangerous  41.2%  bpm1x  50.8%  octave-err   2
+  trance             n=128 (k 58/b 74)  exact  70.7%  dangerous  19.0%  bpm1x  58.1%  octave-err   0
+----------------------------------------------------------------
+  canonical 120-track baseline: exact 69.0%  dangerous 11.9%  bpm 100.0%
+  (a big exact-% drop or dangerous-% rise on a genre = the detector's blind spot there)

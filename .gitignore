@@ -1,0 +1,10 @@
+audio/
+giantsteps-key-dataset/
+giantsteps-tempo-dataset/
+dl_fail.txt
+*.csv
+!examples/*.csv
+models/*.onnx
+models/*.npz
+__pycache__/
+.DS_Store
