@@ -104,7 +104,7 @@ simulated.
 |---|---|---|
 | essentia (edmm profile) | 69.5% | 18.5% |
 | first Cratefox CNN | 72.8% | 14.8% |
-| shipped Cratefox CNN (2026-07-21) | 75.84% | 13.59% |
+| shipped Cratefox CNN (2026-07-26, L6e) | 75.7% | 13.6% |
 
 Safe to mix for the shipped model: 86.4% (100% minus clash risk).
 
@@ -116,26 +116,27 @@ that the expert re-annotation was made to correct, so it is not comparable to
 the numbers above; that full 1225-track run is preserved verbatim in
 `results/RESULTS_2026-07-07_final.txt`.
 
-### Key by genre, before and after the first CNN (596 expert-labeled tracks)
+### Key by genre, essentia versus the shipped model (596 expert-labeled tracks)
 
-Before is essentia edmm, after is the first CNN. This per-genre breakdown has
-not yet been re-run for the currently shipped model, whose overall score is
-75.84% exact / 13.59% clash; the totals line below (72.8%) is the earlier CNN.
+Before is essentia edmm, after is the shipped model, the same one in the overall
+table above (75.7% exact / 13.6% clash on all 596). Small buckets are noisy, so
+the track count is shown. On trance and house the model trades some raw exact
+for fewer clashes, so exact dips there while safe-to-mix still improves.
 
 | Genre | Tracks | Key exact (before -> after) | Would clash (before -> after) |
 |---|---|---|---|
-| Progressive house | 88 | 71.6% -> 72.7% | 13.6% -> 4.5% |
-| Tech house | 80 | 60.0% -> 66.2% | 26.2% -> 28.8% |
-| Deep house | 76 | 76.3% -> 78.9% | 13.2% -> 13.2% |
-| Trance | 58 | 75.9% -> 62.1% | 13.8% -> 8.6% |
-| Electro house | 51 | 82.4% -> 86.3% | 9.8% -> 9.8% |
-| House | 46 | 73.9% -> 65.2% | 21.7% -> 15.2% |
-| Drum and bass | 36 | 61.1% -> 66.7% | 25.0% -> 19.4% |
+| Progressive house | 88 | 71.6% -> 73.9% | 13.6% -> 5.7% |
+| Tech house | 80 | 60.0% -> 70.0% | 26.2% -> 25.0% |
+| Deep house | 76 | 76.3% -> 81.6% | 13.2% -> 11.8% |
+| Trance | 58 | 75.9% -> 63.8% | 13.8% -> 12.1% |
+| Electro house | 51 | 82.4% -> 88.2% | 9.8% -> 7.8% |
+| House | 46 | 73.9% -> 71.7% | 21.7% -> 13.0% |
+| Drum and bass | 36 | 61.1% -> 69.4% | 25.0% -> 19.4% |
 | Techno | 33 | 51.5% -> 69.7% | 36.4% -> 27.3% |
-| Dubstep | 22 | 54.5% -> 63.6% | 22.7% -> 18.2% |
+| Dubstep | 22 | 54.5% -> 68.2% | 22.7% -> 18.2% |
 | Electronica | 20 | 60.0% -> 80.0% | 25.0% -> 15.0% |
-| Minimal | 11 | 63.6% -> 45.5% | 36.4% -> 45.5% |
-| All 596 tracks | 596 | 69.5% -> 72.8% | 18.5% -> 14.8% |
+| Minimal | 11 | 63.6% -> 63.6% | 36.4% -> 36.4% |
+| All 596 tracks | 596 | 69.5% -> 75.7% | 18.5% -> 13.6% |
 
 Weak spots are shown, not hidden: minimal (n=11, small and noisy) got worse,
 and tech house clash rose slightly. Small buckets are noisy; n is listed so
